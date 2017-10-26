@@ -1,13 +1,31 @@
-import javax.swing.JFrame;
-public class Main {
-	public static void main(String[] args) {
-		JFrame w = createWindow();
-		System.out.println("yay");
-	}
-	static JFrame createWindow() {
-		JFrame window = new JFrame("Tic-Tac-Toe");
-		window.setSize(600, 600);
-		window.setVisible(true);
-		return window;
-	}
-}
+				import javax.swing.JFrame;//import javax.swing.JFrame;
+ 					   public class Main {//public class Main {
+  public static void main(String[] args) {//public static void main(String[] args) {
+	  			JFrame w = createWindow();//JFrame w = createWindow();
+										 }//}
+  			static JFrame createWindow() {//static JFrame createWindow() {
+JFrame window = new JFrame("Tic-Tac-Toe");//JFrame window = new JFrame("Tic-Tac-Toe");
+				 window.setSize(600, 600);//window.setSize(600, 600);
+				  window.setVisible(true);//;window.setVisible(true)
+				  			return window;//return window;
+  										 }//}
+ 					   					 }//}
+/*
+
+yall need to learn how to indent like a M A S T E R
+
+.--.--.                      ____                                                                                                                     ,-.                                                     ___                        ,---,                                    
+/  /    '.   ,--,           ,'  , `.                                                                                                               ,--/ /|                                .--.,              ,--.'|_                    ,--.' |                    ,---,           
+|  :  /`. / ,--.'|        ,-+-,.' _ |   ,---.        ,---,                                      ,---,                              ,--,           ,--. :/ |                              ,--.'  \             |  | :,'                   |  |  :       ,---.      ,---.'|           
+;  |  |--`  |  |,      ,-+-. ;   , ||  '   ,'\   ,-+-. /  |                                 ,-+-. /  |          .--.--.          ,'_ /|           :  : ' /                               |  | /\/             :  : ' :                   :  :  :      '   ,'\     |   | :           
+|  :  ;_    `--'_     ,--.'|'   |  || /   /   | ,--.'|'   |           ,---.     ,--.--.    ,--.'|'   |         /  /    '    .--. |  | :    ,---.  |  '  /              ,--.--.           :  : :    ,--.--.  .;__,'  /             ,---.  :  |  |,--. /   /   |    |   | |   ,---.   
+\  \    `. ,' ,'|   |   |  ,', |  |,.   ; ,. :|   |  ,"' |          /     \   /       \  |   |  ,"' |        |  :  /`./  ,'_ /| :  . |   /     \ '  |  :             /       \          :  | |-, /       \ |  |   |             /     \ |  :  '   |.   ; ,. :  ,--.__| |  /     \  
+`----.   \'  | |   |   | /  | |--' '   | |: :|   | /  | |         /    / '  .--.  .-. | |   | /  | |        |  :  ;_    |  ' | |  . .  /    / ' |  |   \           .--.  .-. |         |  : :/|.--.  .-. |:__,'| :            /    / ' |  |   /' :'   | |: : /   ,'   | /    /  | 
+__ \  \  ||  | :   |   : |  | ,    '   | .; :|   | |  | |        .    ' /    \__\/: . . |   | |  | |         \  \    `. |  | ' |  | | .    ' /  '  : |. \           \__\/: . .         |  |  .' \__\/: . .  '  : |__         .    ' /  '  :  | | |'   | .; :.   '  /  |.    ' / | 
+/  /`--'  /'  : |__ |   : |  |/     |   :    ||   | |  |/         '   ; :__   ," .--.; | |   | |  |/           `----.   \:  | : ;  ; | '   ; :__ |  | ' \ \          ," .--.; |         '  : '   ," .--.; |  |  | '.'|        '   ; :__ |  |  ' | :|   :    |'   ; |:  |'   ;   /| 
+'--'.     / |  | '.'||   | |`-'       \   \  / |   | |--'          '   | '.'| /  /  ,.  | |   | |--'           /  /`--'  /'  :  `--'   \'   | '.'|'  : |--'          /  /  ,.  |         |  | |  /  /  ,.  |  ;  :    ;        '   | '.'||  :  :_:,' \   \  / |   | '/  ''   |  / | 
+`--'---'  ;  :    ;|   ;/            `----'  |   |/              |   :    :;  :   .'   \|   |/              '--'.     / :  ,      .-./|   :    :;  |,'            ;  :   .'   \        |  : \ ;  :   .'   \ |  ,   /         |   :    :|  | ,'      `----'  |   :    :||   :    | 
+          |  ,   / '---'                     '---'                \   \  / |  ,     .-./'---'                 `--'---'   `--`----'     \   \  / '--'              |  ,     .-./        |  |,' |  ,     .-./  ---`-'           \   \  / `--''                 \   \  /   \   \  /  
+           ---`-'                                                  `----'   `--`---'                                                    `----'                     `--`---'            `--'    `--`---'                        `----'                         `----'     `----'   
+                                                                                                                                                                                                                                                                                  
+*/
