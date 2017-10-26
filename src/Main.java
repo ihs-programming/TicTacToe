@@ -9,7 +9,9 @@ window.setSize(600, 600);
 window.setVisible(true);
 return window;
 }
+System.out.println("Hola World");
 }
+
 /*
 
 yall need to learn how to indent like a M A S T E R
