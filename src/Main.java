@@ -2,6 +2,7 @@ import javax.swing.JFrame;
 public class Main {
 	public static void main(String[] args) {
 		JFrame w = createWindow();
+		System.out.println("yay");
 	}
 	static JFrame createWindow() {
 		JFrame window = new JFrame("Tic-Tac-Toe");
