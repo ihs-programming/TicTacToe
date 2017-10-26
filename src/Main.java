@@ -10,5 +10,8 @@ public class Main {
 		window.setSize(600, 600);
 		window.setVisible(true);
 		return window;
+		
+		
+		//hi
 	}
 }
