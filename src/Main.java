@@ -1,31 +1,19 @@
-				import javax.swing.JFrame;//import javax.swing.JFrame;
- 					   public class Main {//public class Main {
-  public static void main(String[] args) {//public static void main(String[] args) {
-	  			JFrame w = createWindow();//JFrame w = createWindow();
-										 }//}
-  			static JFrame createWindow() {//static JFrame createWindow() {
-JFrame window = new JFrame("Tic-Tac-Toe");//JFrame window = new JFrame("Tic-Tac-Toe");
-				 window.setSize(600, 600);//window.setSize(600, 600);
-				  window.setVisible(true);//;window.setVisible(true)
-				  			return window;//return window;
-  										 }//}
- 					   					 }//}
-/*
+import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Graphics;
 
-yall need to learn how to indent like a M A S T E R
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
-.--.--.                      ____                                                                                                                     ,-.                                                     ___                        ,---,                                    
-/  /    '.   ,--,           ,'  , `.                                                                                                               ,--/ /|                                .--.,              ,--.'|_                    ,--.' |                    ,---,           
-|  :  /`. / ,--.'|        ,-+-,.' _ |   ,---.        ,---,                                      ,---,                              ,--,           ,--. :/ |                              ,--.'  \             |  | :,'                   |  |  :       ,---.      ,---.'|           
-;  |  |--`  |  |,      ,-+-. ;   , ||  '   ,'\   ,-+-. /  |                                 ,-+-. /  |          .--.--.          ,'_ /|           :  : ' /                               |  | /\/             :  : ' :                   :  :  :      '   ,'\     |   | :           
-|  :  ;_    `--'_     ,--.'|'   |  || /   /   | ,--.'|'   |           ,---.     ,--.--.    ,--.'|'   |         /  /    '    .--. |  | :    ,---.  |  '  /              ,--.--.           :  : :    ,--.--.  .;__,'  /             ,---.  :  |  |,--. /   /   |    |   | |   ,---.   
-\  \    `. ,' ,'|   |   |  ,', |  |,.   ; ,. :|   |  ,"' |          /     \   /       \  |   |  ,"' |        |  :  /`./  ,'_ /| :  . |   /     \ '  |  :             /       \          :  | |-, /       \ |  |   |             /     \ |  :  '   |.   ; ,. :  ,--.__| |  /     \  
-`----.   \'  | |   |   | /  | |--' '   | |: :|   | /  | |         /    / '  .--.  .-. | |   | /  | |        |  :  ;_    |  ' | |  . .  /    / ' |  |   \           .--.  .-. |         |  : :/|.--.  .-. |:__,'| :            /    / ' |  |   /' :'   | |: : /   ,'   | /    /  | 
-__ \  \  ||  | :   |   : |  | ,    '   | .; :|   | |  | |        .    ' /    \__\/: . . |   | |  | |         \  \    `. |  | ' |  | | .    ' /  '  : |. \           \__\/: . .         |  |  .' \__\/: . .  '  : |__         .    ' /  '  :  | | |'   | .; :.   '  /  |.    ' / | 
-/  /`--'  /'  : |__ |   : |  |/     |   :    ||   | |  |/         '   ; :__   ," .--.; | |   | |  |/           `----.   \:  | : ;  ; | '   ; :__ |  | ' \ \          ," .--.; |         '  : '   ," .--.; |  |  | '.'|        '   ; :__ |  |  ' | :|   :    |'   ; |:  |'   ;   /| 
-'--'.     / |  | '.'||   | |`-'       \   \  / |   | |--'          '   | '.'| /  /  ,.  | |   | |--'           /  /`--'  /'  :  `--'   \'   | '.'|'  : |--'          /  /  ,.  |         |  | |  /  /  ,.  |  ;  :    ;        '   | '.'||  :  :_:,' \   \  / |   | '/  ''   |  / | 
-`--'---'  ;  :    ;|   ;/            `----'  |   |/              |   :    :;  :   .'   \|   |/              '--'.     / :  ,      .-./|   :    :;  |,'            ;  :   .'   \        |  : \ ;  :   .'   \ |  ,   /         |   :    :|  | ,'      `----'  |   :    :||   :    | 
-          |  ,   / '---'                     '---'                \   \  / |  ,     .-./'---'                 `--'---'   `--`----'     \   \  / '--'              |  ,     .-./        |  |,' |  ,     .-./  ---`-'           \   \  / `--''                 \   \  /   \   \  /  
-           ---`-'                                                  `----'   `--`---'                                                    `----'                     `--`---'            `--'    `--`---'                        `----'                         `----'     `----'   
-                                                                                                                                                                                                                                                                                  
-*/
+public class Main {
+	public static void main(String[] args) {
+		Game g = new Game();
+		Window w = new Window(g);
+		JFrame f = new JFrame("TicTacToe");
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.add(w);
+		f.pack();
+		
+		f.setVisible(true);
+	}
+}
