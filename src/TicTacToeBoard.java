@@ -37,10 +37,22 @@ public class TicTacToeBoard {
 		
 		if(x > 2 || x < 0) {
 			System.out.println(x + " is not valid in X");
+			return;
 		}
 		else if(y > 2 || y < 0){
 			System.out.println(y + " is not valid in Y");
+			return;
 		}
+		
+		if(xTurn) {
+			board[x][y] = 2;
+		}
+		else {
+			board[x][y] = 1;
+		}
+		
+		
+		
 		
 	}
 	
