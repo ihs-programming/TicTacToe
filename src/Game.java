@@ -12,7 +12,10 @@ public class Game {
 	 * @param g
 	 */
 	public void draw(Graphics g) {
-		
+		g.drawLine(160,0,160,456);
+		g.drawLine(320, 0, 320, 456);
+		g.drawLine(0, 160, 480, 160);
+		g.drawLine(0, 320, 480, 320);
 	}
 	
 	public void play(int x, int y) {
