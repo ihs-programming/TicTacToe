@@ -13,6 +13,7 @@ public class TicTacToeBoard {
 	 */
 	public boolean xTurn = false;
 	
+	
 	public TicTacToeBoard () {
 		
 	}
@@ -43,6 +44,18 @@ public class TicTacToeBoard {
 			System.out.println(y + " is not valid in Y");
 			return;
 		}
+		int counter = 0;
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				if (board[i][j] != 0) {
+					counter++;
+				}
+			}
+			
+			if(counter >= 9) {
+				System.out.println("The board is full error");
+				return;
+			}
 		
 		if(this.xTurn) {
 			this.board[x][y] = 2;
