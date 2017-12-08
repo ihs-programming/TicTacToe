@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class TicTacToeBoard {
 	
@@ -6,7 +7,7 @@ public class TicTacToeBoard {
 	 * 1 means o
 	 * 2 means x
 	 */
-	public int[][] board = new int[3][3];
+	public static int[][] board = new int[3][3];
 	
 	/**
 	 * player o plays first
@@ -24,7 +25,56 @@ public class TicTacToeBoard {
 	 * 2 means x won
 	 */
 	public int getGameState() {
-		return -1;
+		for(int a = 0; a < 3; a++)
+		{
+			for(int b = 0; b < 3; b++)
+			{
+				int val = board[a][b];
+				if(val == 0)
+					continue;
+				if(checkVert(a, b, val)) return val;
+				if(checkHorz(a, b, val)) return val;
+			}
+		}
+		return checkDiag();
+	}
+	private static boolean checkVert(int a, int b, int val)
+	{
+		if(a == 0 || a == 2)
+		{
+			if(board[a][b] == val) return true;
+			return false;
+		}
+		if(board[a][b] != val)
+		{
+			return false;
+		}
+		return checkVert(a - 1, b, val) && checkVert(a + 1, b, val);
+	}
+	private static boolean checkHorz(int a, int b, int val)
+	{
+		if(b == 0 || b == 2)
+		{
+			if(board[a][b] == val) return true;
+			return false;
+		}
+		if(board[a][b] != val)
+		{
+			return false;
+		}
+		return checkHorz(a, b - 1, val) && checkHorz(a, b + 1, val);
+	}
+	private static int checkDiag()
+	{
+		if(board[0][0] != 0 && board[0][0] == board[1][1] && board[0][0] == board[2][2])
+		{
+			return board[0][0];
+		}
+		if(board[0][2] != 0 && board[0][2] == board[1][1] && board[0][0] == board[2][0])
+		{
+			return board[0][2];
+		}
+		return 0;
 	}
 	
 	/**
