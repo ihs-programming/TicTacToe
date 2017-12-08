@@ -34,6 +34,14 @@ public class TicTacToeBoard {
 	 * @param y
 	 */
 	public void playMove(int x, int y) {
+		
+		if(x > 2 || x < 0) {
+			System.out.println(x + " is not valid in X");
+		}
+		else if(y > 2 || y < 0){
+			System.out.println(y + " is not valid in Y");
+		}
+		
 	}
 	
 	/**
