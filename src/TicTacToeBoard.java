@@ -44,11 +44,13 @@ public class TicTacToeBoard {
 			return;
 		}
 		
-		if(xTurn) {
-			board[x][y] = 2;
+		if(this.xTurn) {
+			this.board[x][y] = 2;
+			this.xTurn = !xTurn;
 		}
 		else {
-			board[x][y] = 1;
+			this.board[x][y] = 1;
+			this.xTurn = !xTurn;
 		}
 		
 		
