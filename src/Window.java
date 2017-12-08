@@ -32,6 +32,16 @@ public class Window extends JPanel implements MouseListener {
 	 */
 	@Override
 	public void mousePressed(MouseEvent event) {
+		int x = event.getX();
+		int y = event.getY();
+		if (x >= 0 && x <= 480) {
+		} else {
+			x = 480;
+		}
+		if (y >= 0 && y <= 480) {
+		} else {
+			y = 480;
+		}
 	}
 
 	@Override
