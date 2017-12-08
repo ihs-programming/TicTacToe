@@ -106,6 +106,7 @@ public class TicTacToeBoard {
 				System.out.println("The board is full error");
 				return;
 			}
+		}
 		
 		if(this.xTurn) {
 			this.board[x][y] = 2;
@@ -115,10 +116,6 @@ public class TicTacToeBoard {
 			this.board[x][y] = 1;
 			this.xTurn = !xTurn;
 		}
-		
-		
-		
-		
 	}
 	
 	/**
