@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 public class Window extends JPanel implements MouseListener {
 	private Game game;
 	public Window(Game g) {
-		this.setSize(800,800);
+		this.setSize(480,456);
 		this.addMouseListener(this);
 		game = g;
 	}
@@ -20,7 +20,7 @@ public class Window extends JPanel implements MouseListener {
 	
 	@Override
 	public Dimension getPreferredSize() {
-		return new Dimension(800, 800);
+		return new Dimension(480, 456);
 	}
 
 	/**
@@ -28,7 +28,7 @@ public class Window extends JPanel implements MouseListener {
 	 * play human move and computer move when someone clicks
 	 * 
 	 * note, event.getX() and event.getY() may be useful...
-	 * also, note that the board should have dimensions 800 by 800
+	 * also, note that the board should have dimensions 480 by 456
 	 */
 	@Override
 	public void mousePressed(MouseEvent event) {
