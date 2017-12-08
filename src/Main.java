@@ -13,7 +13,7 @@ public class Main {
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f.add(w);
 		f.pack();
-		
+		f.setResizable(false);		
 		f.setVisible(true);
 	}
 }
