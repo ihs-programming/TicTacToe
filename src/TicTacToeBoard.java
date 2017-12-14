@@ -52,6 +52,7 @@ public class TicTacToeBoard {
 		}
 		return checkVert(a - 1, b, val) && checkVert(a + 1, b, val);
 	}
+
 	private static boolean checkHorz(int a, int b, int val)
 	{
 		if(b == 0 || b == 2)
@@ -65,6 +66,7 @@ public class TicTacToeBoard {
 		}
 		return checkHorz(a, b - 1, val) && checkHorz(a, b + 1, val);
 	}
+
 	private static int checkDiag()
 	{
 		if(board[0][0] != 0 && board[0][0] == board[1][1] && board[0][0] == board[2][2])
@@ -85,7 +87,6 @@ public class TicTacToeBoard {
 	 * @param y
 	 */
 	public void playMove(int x, int y) {
-		
 		if(x > 2 || x < 0) {
 			System.out.println(x + " is not valid in X");
 			return;
@@ -94,20 +95,10 @@ public class TicTacToeBoard {
 			System.out.println(y + " is not valid in Y");
 			return;
 		}
-		int counter = 0;
-		for (int i = 0; i < 3; i++) {
-			for (int j = 0; j < 3; j++) {
-				if (board[i][j] != 0) {
-					counter++;
-				}
-			}
-			
-			if(counter >= 9) {
-				System.out.println("The board is full error");
-				return;
-			}
+		if (board[x][y] != 0) {
+			System.out.println("Already played there");
+			return;
 		}
-		
 		if(this.xTurn) {
 			this.board[x][y] = 2;
 			this.xTurn = !xTurn;
@@ -127,6 +118,7 @@ public class TicTacToeBoard {
 			for (int y = 0; y < 3; y++) {
 				if (board[x][y] == 0) {
 					playMove(x, y);
+					return;
 				}
 			}
 		}

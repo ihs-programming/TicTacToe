@@ -6,6 +6,7 @@ import java.awt.event.MouseListener;
 import javax.swing.JPanel;
 
 public class Window extends JPanel implements MouseListener {
+	private final Dimension DEFAULT_DIMENSION = new Dimension(480, 450);
 	private Game game;
 	public Window(Game g) {
 		this.setSize(480,450);
@@ -20,7 +21,7 @@ public class Window extends JPanel implements MouseListener {
 	
 	@Override
 	public Dimension getPreferredSize() {
-		return new Dimension(480, 450);
+		return DEFAULT_DIMENSION;
 	}
 
 	/**
@@ -34,38 +35,40 @@ public class Window extends JPanel implements MouseListener {
 	public void mousePressed(MouseEvent event) {
 		int x = event.getX();
 		int y = event.getY();
-		if (x >= 0 && x <= 480) {
-		} else {
-			x = 480;
+		int xrow = 0, yrow = 0;
+		for (int i = 0; i < 3; i++) {
+			if (x <= (i+1) * DEFAULT_DIMENSION.getWidth()/3) {
+				xrow = i;
+				break;
+			}
 		}
-		if (y >= 0 && y <= 480) {
-		} else {
-			y = 480;
+		for (int i = 0; i < 3; i++) {
+			if (y <= (i+1) * DEFAULT_DIMENSION.getHeight()/3) {
+				yrow = i;
+				break;
+			}
 		}
+		game.play(xrow, yrow);
+		this.repaint();
 	}
 
 	@Override
 	public void mouseClicked(MouseEvent arg0) {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent arg0) {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void mouseExited(MouseEvent arg0) {
 		// TODO Auto-generated method stub
-		
 	}
-
 
 	@Override
 	public void mouseReleased(MouseEvent arg0) {
 		// TODO Auto-generated method stub
-		
 	}
 }
