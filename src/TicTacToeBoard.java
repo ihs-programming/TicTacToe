@@ -25,18 +25,37 @@ public class TicTacToeBoard {
 	 * 1 means o won
 	 * 2 means x won
 	 */
-	//OH BABY
 	public int getGameState() {
-		//oh shit its about to get LIT
-		if(board[0][0] != 0 && board[0][0] == board[0][1] && board[0][0] == board[0][2]) return board[0][0];
-		if(board[0][0] != 0 && board[0][0] == board[1][0] && board[0][0] == board[2][0]) return board[0][0];
-		if(board[0][0] != 0 && board[0][0] == board[1][1] && board[0][0] == board[2][2]) return board[0][0];
-		if(board[1][0] != 0 && board[1][0] == board[1][1] && board[1][0] == board[1][2]) return board[1][0];
-		if(board[2][0] != 0 && board[2][0] == board[2][1] && board[2][0] == board[2][2]) return board[2][0];
-		if(board[0][1] != 0 && board[0][1] == board[1][1] && board[0][1] == board[2][1]) return board[0][1];
-		if(board[0][2] != 0 && board[0][2] == board[1][2] && board[0][2] == board[2][2]) return board[0][2];
-		if(board[2][0] != 0 && board[2][0] == board[1][1] && board[2][0] == board[0][2]) return board[2][0];
+		for (int t = 0; t < 2; t++) {
+			boolean transpose = t == 1;
+			for (int i = 0; i < 3; i++) {
+				if (getSquare(i, 0, transpose) == 0) {
+					continue;
+				}
+				boolean foundMatch = true;
+				for (int j = 1; j < 3; j++) {
+					foundMatch = foundMatch && getSquare(i, j, transpose) == getSquare(i, j-1, transpose);
+				}
+				if (foundMatch) {
+					return getSquare(i, 0, transpose);
+				}
+			}
+		}
+		// Check diagonals
+		if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != 0) {
+			return board[0][0];
+		}
+		if (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[1][1] != 0) {
+			return board[1][1];
+		}
 		return 0;
+	}
+	
+	private int getSquare(int x, int y, boolean transpose) {
+		if (transpose) {
+			return board[y][x];
+		}
+		return board[x][y];
 	}
 	
 	/**

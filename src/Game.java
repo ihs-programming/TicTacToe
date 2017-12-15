@@ -38,10 +38,10 @@ public class Game {
 		g.setFont(new Font("TimesRoman", Font.BOLD, 72));
 		System.out.printf("DEBUG: Game state %d\n", b.getGameState());
 		if (b.getGameState() == 1) {
-			g.drawString("X won", WINDOW_HEIGHT/2, WINDOW_WIDTH/2);
+			g.drawString("O won", WINDOW_HEIGHT/2, WINDOW_WIDTH/2);
 		}
 		if (b.getGameState() == 2) {
-			g.drawString("O won", WINDOW_HEIGHT/2, WINDOW_WIDTH/2);
+			g.drawString("X won", WINDOW_HEIGHT/2, WINDOW_WIDTH/2);
 		}
 	}
 	
