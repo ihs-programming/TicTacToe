@@ -25,58 +25,17 @@ public class TicTacToeBoard {
 	 * 1 means o won
 	 * 2 means x won
 	 */
+	//OH BABY
 	public int getGameState() {
-		for(int a = 0; a < 3; a++)
-		{
-			for(int b = 0; b < 3; b++)
-			{
-				int val = board[a][b];
-				if(val == 0)
-					continue;
-				if(checkVert(a, b, val)) return val;
-				if(checkHorz(a, b, val)) return val;
-			}
-		}
-		return checkDiag();
-	}
-	private static boolean checkVert(int a, int b, int val)
-	{
-		if(a == 0 || a == 2)
-		{
-			if(board[a][b] == val) return true;
-			return false;
-		}
-		if(board[a][b] != val)
-		{
-			return false;
-		}
-		return checkVert(a - 1, b, val) && checkVert(a + 1, b, val);
-	}
-
-	private static boolean checkHorz(int a, int b, int val)
-	{
-		if(b == 0 || b == 2)
-		{
-			if(board[a][b] == val) return true;
-			return false;
-		}
-		if(board[a][b] != val)
-		{
-			return false;
-		}
-		return checkHorz(a, b - 1, val) && checkHorz(a, b + 1, val);
-	}
-
-	private static int checkDiag()
-	{
-		if(board[0][0] != 0 && board[0][0] == board[1][1] && board[0][0] == board[2][2])
-		{
-			return board[0][0];
-		}
-		if(board[0][2] != 0 && board[0][2] == board[1][1] && board[0][0] == board[2][0])
-		{
-			return board[0][2];
-		}
+		//oh shit its about to get LIT
+		if(board[0][0] != 0 && board[0][0] == board[0][1] && board[0][0] == board[0][2]) return board[0][0];
+		if(board[0][0] != 0 && board[0][0] == board[1][0] && board[0][0] == board[2][0]) return board[0][0];
+		if(board[0][0] != 0 && board[0][0] == board[1][1] && board[0][0] == board[2][2]) return board[0][0];
+		if(board[1][0] != 0 && board[1][0] == board[1][1] && board[1][0] == board[1][2]) return board[1][0];
+		if(board[2][0] != 0 && board[2][0] == board[2][1] && board[2][0] == board[2][2]) return board[2][0];
+		if(board[0][1] != 0 && board[0][1] == board[1][1] && board[0][1] == board[2][1]) return board[0][1];
+		if(board[0][2] != 0 && board[0][2] == board[1][2] && board[0][2] == board[2][2]) return board[0][2];
+		if(board[2][0] != 0 && board[2][0] == board[1][1] && board[2][0] == board[0][2]) return board[2][0];
 		return 0;
 	}
 	
